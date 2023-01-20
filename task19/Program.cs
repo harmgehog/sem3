@@ -1,30 +1,41 @@
-﻿// Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+﻿// Задача 19
 
-// A (3,6); B (2,1) -> 5,09 
-// A (7,-5); B (1,-1) -> 7,21
+// Напишите программу, которая принимает на вход пятизначное число 
+// и проверяет, является ли оно палиндромом.
+// 14212 -> нет
+// 12821 -> да
+// 23432 -> да
 
-void Distance(double x, double y, double x2, double y2)
+/* палиндромы рекомендуется проверять строкой и без дублирования!!! 
+Так как при больших последовательностях будут проблемы и с памятью и с вычислениями.
+Плюс можно не искать середину и не высчитывать в цикле */
+
+void CheckPalindrome(string x)
 {
-    double dis = Math.Pow(Math.Pow(x-x2, 2) + Math.Pow(y-y2, 2), 0.5);
-    Console.Write(dis);
+    int rightIndex = x.Length - 1;  // при неизвестной длине задаем конечный 
+    int leftIndex = 0;              // и начальный индексы
+    string output = "ДА";
+    while (leftIndex < rightIndex)  // сравниваем чары пока левый не превысит правый
+    {
+        if (x[leftIndex] != x[rightIndex])
+        {
+            output = "НЕТ";
+            break;                  // брейкаем чтобы не лопатить впустую
+        }
+        leftIndex++;
+        rightIndex--;
+
+    }
+    Console.WriteLine(output);
 }
 
-
-int GetNum(string text)
+string GetText(string text)
 {
     Console.WriteLine(text);
-    int num = int.Parse(Console.ReadLine());
-    return num;
+    return Console.ReadLine();
 }
 
+string x = GetText("Input value to check for palindrome: ");
 
-// ввод данных от пользователя
-
-double x = GetNum("Input value X");
-double x2 = GetNum("Input value X2");
-double y = GetNum("Input value Y");
-double y2 = GetNum("Input value Y2");
-Console.Write("Distance is: ");
-
-// find 
-Distance(x, y, x2, y2);
+// 
+CheckPalindrome(x);
