@@ -4,7 +4,7 @@
 A (3,6,8); B (2,1,-7), -> 15.84
 A (7,-5, 0); B (1,-1,9) -> 11.53 */
 
-void findDistance(double x1, double y1, double z1, double x2, double y2, double z2)
+void FindDistance(double x1, double y1, double z1, double x2, double y2, double z2)
 {
     double distance = Math.Sqrt(
         Math.Pow(x2 - x1, 2) +
@@ -33,4 +33,4 @@ var xyz2 = GetNum("2я точка (цифры через ',' или ' '): ");
 Console.Write("Расстояние между этими точками: ");
 
 // запуск метода
-findDistance(xyz1.x, xyz1.y, xyz1.z, xyz2.x, xyz2.y, xyz2.z);
+FindDistance(xyz1.x, xyz1.y, xyz1.z, xyz2.x, xyz2.y, xyz2.z);
