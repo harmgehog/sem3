@@ -29,7 +29,7 @@ void CheckPalindrome(string x)
     Console.WriteLine(output);
 }
 
-string GetText(string text)
+string GetText(string text)         // метод заготовка для последующих ДЗ
 {
     Console.WriteLine(text);
     return Console.ReadLine();
