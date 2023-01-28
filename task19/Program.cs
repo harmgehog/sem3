@@ -10,7 +10,7 @@
 Так как при больших последовательностях будут проблемы и с памятью и с вычислениями.
 Плюс можно не искать середину и не высчитывать в цикле */
 
-void CheckPalindrome(string x)
+static void CheckPalindrome(string x)
 {
     int rightIndex = x.Length - 1;  // при неизвестной длине задаем конечный 
     int leftIndex = 0;              // и начальный индексы
@@ -32,7 +32,7 @@ void CheckPalindrome(string x)
 string GetText(string text)         // метод заготовка для последующих ДЗ
 {
     Console.WriteLine(text);
-    return Console.ReadLine();
+    return Console.ReadLine()!;
 }
 
 string x = GetText("Input value to check for palindrome: ");

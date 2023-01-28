@@ -15,7 +15,7 @@ void RowOfCubes(int x)
 int GetNum(string text)
 {
     Console.Write(text);
-    int x = int.Parse(Console.ReadLine());
+    int x = int.Parse(Console.ReadLine()!);
     return (x);
 }
 

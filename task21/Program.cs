@@ -18,7 +18,7 @@ static (int x, int y, int z) GetNum(string text)
 {
     Console.WriteLine(text);
     char[] sep = { ',', ',', ';', ' ' };
-    string[] arr = Console.ReadLine().Split(sep);
+    string[] arr = Console.ReadLine()!.Split(sep);
     int x = int.Parse(arr[0]);
     int y = int.Parse(arr[1]);
     int z = int.Parse(arr[2]);
